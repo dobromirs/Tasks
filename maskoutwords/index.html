@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MaskWordsOut</title>
+</head>
+<body>
+	<script type="text/javascript">
+    	var words = ["Yesterday", "Dog", "food", "walk"];
+    	var vtext = "Yesterday, I took my Dog for a walk.\n It was crazy! My dog wanted only food.";
+		var regex;
+    	var replacement ='';
+
+    	for (var i = 0; i < words.length; i++) {
+    			regex = new RegExp(words[i], 'g');
+    			for (var j = 0; j < words[i].length; j++) {
+    				replacement += "*";
+    			};
+    			vtext = vtext.replace(regex, replacement);
+    			replacement = '';
+    	};
+    	console.log(vtext);
+	</script>
+</body>
+</html>
